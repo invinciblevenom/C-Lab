@@ -4,6 +4,7 @@ of the basic salary while the HRA is 15% of the basic salary. Provident
 Fund is deducted at the rate of 10% of the gross salary (BS+DA+HRA).
 Program to calculate the Net Salary.
 */
+
 #include <stdio.h>
 
 int main() {
