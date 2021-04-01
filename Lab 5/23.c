@@ -1,0 +1,3 @@
+/*
+Write a program to convert decimal number in to binary number.
+*/
