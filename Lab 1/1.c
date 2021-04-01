@@ -14,15 +14,21 @@ int main() {
 	do {
 		cout << "Input the lenght of the first side of the triangle: ";
 		cin >> a;
-	} while (!cin.good() || a <= 0);
+		cin.clear();
+		cin.ignore(256, '\n');
+	} while (cin.fail() || a <= 0);
 	do {
 		cout << "Input the lenght of the second side of the triangle: ";
 		cin >> b;
-	} while (!cin.good() || b <= 0);
+		cin.clear();
+		cin.ignore(256, '\n');
+	} while (cin.fail() || b <= 0);
 	do {
 		cout << "Input the lenght of the third side of the triangle: ";
 		cin >> c;
-	} while (!cin.good() || c <= 0);
+		cin.clear();
+		cin.ignore(256, '\n');
+	} while (cin.fail() || c <= 0);
 
 	s = a + b + c;
 	s /= 2;
