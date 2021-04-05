@@ -1,0 +1,3 @@
+/*
+Write a program to find the factorial of given number using command line argument.
+*/
