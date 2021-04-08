@@ -6,7 +6,7 @@ Write a program to find the largest of three numbers using nested if else.
 
 int main(void) {
   int a, b, c;
-  // 5, 2, 3
+  // 5 2 3 (Enter numbers with space)
   printf("Enter any three numbers to find largest among them: ");
   scanf("%d %d %d", &a, &b, &c);
   if(a > b) {
