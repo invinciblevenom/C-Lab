@@ -9,34 +9,40 @@ or
 e) Total of three subjects marks > 200
 */
 
-#define SUBJECT_COUNT 3
+#include <stdio.h>
+void main()
+{  
+   int p,c,m,t,mp;
 
-#include <iostream>
+   printf("Eligibility Criteria :\n");
+   printf("a.Marks in Phy:>40\n");
+   printf("b.Marks in Chem:>50\n");
+   printf("c.Marks in Maths:>60\n");
+   printf("d.Total in Maths and Physics >150\n");
+   printf("e.Total in all three subject >200\n");
+   
+   printf("-------------------------------------\n");
 
-using namespace std;
+   printf("Input the marks obtained in Physics :");
+   scanf("%d",&p);
+   printf("Input the marks obtained in Chemistry :");
+   scanf("%d",&c);
+   printf("Input the marks obtained in Mathematics :");
+   scanf("%d",&m);
+   printf("Total marks of Maths, Physics and Chemistry : %d\n",m+p+c);
+   printf("Total marks of Maths and  Physics : %d\n",m+p);
 
-int main() {
-	string subject[] = { "physics", "chemistry", "maths" };
-	int minMark[] = { 40, 50, 60 };
-	int mark[SUBJECT_COUNT];
-
-	// reading values
-	for(int i = 0; i < SUBJECT_COUNT; ++i)
-		do {
-			cout << "Insert " << subject[i] << " mark: ";
-			cin >> mark[i];
-			cin.clear();
-			cin.ignore(256, '\n');
-		} while (cin.fail() || mark[i] <= 0);
-
-	// eligibility of single marks
-	for(int i = 0; i < SUBJECT_COUNT; ++i)
-		if(mark[i] <= minMark[i])
-			cout << "The " << subject[i] << " mark is not eligible." << endl;
-
-	// condition d
-	if(mark[0] + mark[2] <= 150)
-		cout << "Total of physics and math's marks is not eligible." << endl;
-
-	// the condition e is unnecessary since it's a subcase of condition d
+   if (p>40)
+         if(c>50)
+             if(m>60)
+	        if((m+p+c)>200||(m+p)>150)
+	           printf("The  candidate is eligible for admission.\n");
+	        else
+	          printf("The candidate is not eligible.\n");
+             else
+	    printf("The candidate is not eligible.\n");
+         else
+	   printf("The candidate is not eligible.\n");
+    else
+     printf("The candidate is not eligible.\n");
 }
