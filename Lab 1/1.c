@@ -3,32 +3,29 @@ Write a program to calculate the area of triangle using formula at=√s(sa)(s-b)
 */
 
 #include <math.h>
-#include <iostream>
-
-using namespace std;
+#include <stdio.h>
 
 int main() {
-	int s, a = 0, b = 0, c = 0;
+	int s, a = 0, b = 0, c = 0, ch = 0;
 	double area;
 
 	do {
-		cout << "Input the lenght of the first side of the triangle: ";
-		cin >> a;
-		cin.clear();
-		cin.ignore(256, '\n');
-	} while (cin.fail() || a <= 0);
+		printf("Input the lenght of the first side of the triangle: ");
+		scanf("%i", &a);
+		// clean up the input buffer in case of bad characters
+		while((ch = getchar()) != '\n' && ch != EOF);
+	} while (a <= 0);
+
 	do {
-		cout << "Input the lenght of the second side of the triangle: ";
-		cin >> b;
-		cin.clear();
-		cin.ignore(256, '\n');
-	} while (cin.fail() || b <= 0);
+		printf("Input the lenght of the second side of the triangle: ");
+		scanf("%i", &b);
+		while((ch = getchar()) != '\n' && ch != EOF);
+	} while (b <= 0);
 	do {
-		cout << "Input the lenght of the third side of the triangle: ";
-		cin >> c;
-		cin.clear();
-		cin.ignore(256, '\n');
-	} while (cin.fail() || c <= 0);
+		printf("Input the lenght of the third side of the triangle: ");
+		scanf("%i", &c);
+		while((ch = getchar()) != '\n' && ch != EOF);
+	} while (c <= 0);
 
 	s = a + b + c;
 	s /= 2;
@@ -40,5 +37,5 @@ int main() {
 		(s - c)
 	);
 
-	cout << "The area of the triangle is " << area << endl;
+	printf("The area of the triangle is %f \n", area);
 }
