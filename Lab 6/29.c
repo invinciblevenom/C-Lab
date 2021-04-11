@@ -1,6 +1,5 @@
 /*
 Q. Write a program (WAP) for matrix multiplication.
-Submitted By : Kshitij (20MI61R06) IIT Kharagpur
 IDE Used to compile : CodeBlocks
 
 */
