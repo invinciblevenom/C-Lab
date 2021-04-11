@@ -2,17 +2,24 @@
 Write a program to convert decimal number in to binary number.
 */
 
+#include <math.h>
 #include <stdio.h>
-
-long decToBin (long n) {
-	if (n == 0)
-		return 0;
-	return (n%2 + 10*decToBin(n/2));
+int convert(long long n);
+int main() {
+    long long n;
+    printf("Enter a binary number: ");
+    scanf("%lld", &n);
+    printf("%lld in binary = %d in decimal", n, convert(n));
+    return 0;
 }
 
-int main(int argc, const char * argv[]) {
-	long n;
-	printf("This program will convert a decimal number into binary using recursion.\n\tEnter the decimal number : ");
-	scanf("%ld", &n);
-	printf("\n\t %ld|d = %ld|b\n\n", n, decToBin(n));
+int convert(long long n) {
+    int dec = 0, i = 0, rem;
+    while (n != 0) {
+        rem = n % 10;
+        n /= 10;
+        dec += rem * pow(2, i);
+        ++i;
+    }
+    return dec;
 }
