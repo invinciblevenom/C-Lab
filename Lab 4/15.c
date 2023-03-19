@@ -1,0 +1,3 @@
+/*
+Write a function that return sum of all the odd digits of a given positive number entered through keyboard.
+*/

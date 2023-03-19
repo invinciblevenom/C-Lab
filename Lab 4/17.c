@@ -1,0 +1,3 @@
+/*
+Write a program to calculate the factorial for given number using function.
+*/
